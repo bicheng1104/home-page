@@ -1,12 +1,5 @@
 <template>
   <div>
-    <div class="header">
-      <div class="flex items-center" style="height: 80px">
-        <div class="px-6"><span class="font-semibold">DEV</span>EDGE</div>
-        <div class="flex-1"></div>
-        <div class="right iconfont px-4">&#xeaf1;</div>
-      </div>
-    </div>
     <div>
       <div
         class="block w-full text-white text-center w-full"
@@ -48,6 +41,22 @@ export default Vue.component('top-block', {
 })
 </script>
 
-<style lang="css">
-@import './index.css';
+<style lang="postCss" scoped>
+.mini-title {
+  background: rgb(255 255 255 / 10%);
+  border-radius: 4px;
+}
+
+.img1 {
+  width: 100%;
+  max-width: 920px;
+  background: url('~/assets/images/GettyImages-1092342344.png') no-repeat;
+  background-size: 100% auto;
+}
+
+.img1::before {
+  content: '';
+  display: block;
+  padding-top: 100%;
+}
 </style>

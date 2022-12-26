@@ -10,5 +10,6 @@ module.exports = {
         ignoreAtRules: ['tailwind'],
       },
     ],
+    'font-family-no-missing-generic-family-keyword': null,
   },
 }

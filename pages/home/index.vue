@@ -80,50 +80,6 @@
         <button class="signup-button w-2/6 phone-max:w-full phone-max:mt-4 pad-min:ml-4 pad-min:w-40">Submit</button>
       </div>
     </div>
-    <div class="bottom">
-      <div class="logo">
-        <img src="~/assets/images/devedge.png" />
-      </div>
-      <div class="devedge-content pad-min:flex pad-min:align-start pad-min:justify-between">
-        <div class="edges devedge-item w-full devedge-content-title">
-          <div class="phone-max:w-2/6 phone-max:inline-block">About</div>
-          <div class="phone-max:w-2/6 phone-max:inline-block">Contact</div>
-          <div class="phone-max:w-2/6 phone-max:inline-block">Open Source</div>
-          <div class="phone-max:w-2/6 phone-max:inline-block">IoT (Internet of Things)</div>
-          <div class="phone-max:w-2/6 phone-max:inline-block">Log In</div>
-        </div>
-        <div class="solution devedge-item w-full">
-          <div class="devedge-content-title">Solution</div>
-          <div>Fraud Prevention</div>
-          <div>Call Verification</div>
-          <div>5G Location Services</div>
-          <div>Enhanced Caller ID</div>
-          <div>IoT Developer Kit</div>
-        </div>
-        <div class="terms devedge-item w-full">
-          <div class="devedge-content-title">Terms</div>
-          <div>Privacy Center</div>
-          <div>Privacy Policy</div>
-          <div class="">Fraud Prevent Data Use Policy</div>
-          <div>Terms & Conditions</div>
-          <div>Do Not Sell My Data</div>
-        </div>
-        <div class="support devedge-item w-full">
-          <div class="devedge-content-title">Support</div>
-          <div>General FAQ</div>
-          <div>API documentation</div>
-          <div>IoT documentation</div>
-          <div>Open Source documentation</div>
-        </div>
-      </div>
-      <div>
-        <div>
-          <div>Copyright © 2022 T-Mobile.</div>
-          <div>All Rights Reserved.</div>
-        </div>
-        <div></div>
-      </div>
-    </div>
   </div>
 </template>
 
@@ -133,6 +89,7 @@ import { panelData, nextYearTargets, topData, customerImages } from './index.dat
 
 export default Vue.extend({
   name: 'HomePage',
+  layout: 'BaseLayout',
   data: () => ({
     topData,
     panelData,
@@ -147,5 +104,184 @@ export default Vue.extend({
 </script>
 
 <style lang="css">
-@import './index.css';
+.mini-title {
+  background: rgb(255 255 255 / 10%);
+  border-radius: 4px;
+}
+
+.img1 {
+  width: 100%;
+  max-width: 920px;
+  background: url('~/assets/images/GettyImages-1092342344.png') no-repeat;
+  background-size: 100% auto;
+}
+
+.img1::before {
+  content: '';
+  display: block;
+  padding-top: 100%;
+}
+
+.white-block {
+  padding: 0 24px;
+}
+
+.panel-container {
+  padding: 24px 0;
+  gap: 10px;
+  vertical-align: top;
+  height: auto;
+}
+
+.panel-gradient {
+  @apply bg-gradient-to-r from-purple-400 via-pink-500 to-red-500;
+}
+
+.panel {
+  border-radius: 8px;
+  height: 100%;
+}
+
+.inner-panel {
+  padding: 88px 40px 40px;
+}
+
+.panel-title {
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 36px;
+  margin-bottom: 8px;
+}
+
+.panel-content {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 24px;
+}
+
+.panel-button-text {
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  text-decoration-line: underline;
+}
+
+.panel-image {
+  background-size: 100% 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 136px;
+}
+
+.internet-of-things {
+  background-image: url('~/assets/images/internet-of-things.png');
+}
+
+.open-source-projects {
+  background-image: url('~/assets/images/open-source-projects.png');
+}
+
+.solutions {
+  background-image: url('~/assets/images/solutions.png');
+}
+
+.line {
+  height: 1px;
+  background-color: #9b9b9b;
+  margin: 29px auto 24px;
+}
+
+.next-year-des {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 24px;
+}
+
+.next-year-target {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  margin-bottom: 16px;
+  color: #262626;
+}
+
+.share-des {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  margin: 8px 0 40px;
+  color: #000;
+}
+
+.share-btn {
+  height: 56px;
+  background: #e20074;
+  margin-bottom: 40px;
+}
+
+.serve-title {
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 36px;
+  color: #262626;
+  margin-bottom: 16px;
+}
+
+.serve-des {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #000;
+  margin-bottom: 40px;
+}
+
+.customer-images {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 120px;
+}
+
+.email {
+  background: linear-gradient(90deg, #870b4a 0%, #e20074 100%);
+  padding: 48px 24px 76px;
+}
+
+.signup-title {
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 24px;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.signup-des {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #fff;
+  margin-bottom: 24px;
+}
+
+.signup-input {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.5px;
+  color: #6a6a6a;
+  padding: 16px 0 16px 20px;
+}
+
+.signup-button {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 56px;
+  text-align: center;
+  color: #fff;
+  background: #000;
+  height: 56px;
+}
 </style>
