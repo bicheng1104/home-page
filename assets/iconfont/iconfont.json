@@ -1,0 +1,30 @@
+{
+  "id": "3836720",
+  "name": "HomePage",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "2674474",
+      "name": "播放",
+      "font_class": "bofang",
+      "unicode": "e624",
+      "unicode_decimal": 58916
+    },
+    {
+      "icon_id": "5387521",
+      "name": "菜单",
+      "font_class": "caidan",
+      "unicode": "eaf1",
+      "unicode_decimal": 60145
+    },
+    {
+      "icon_id": "19446212",
+      "name": "推特",
+      "font_class": "twitter-square-fill",
+      "unicode": "ea90",
+      "unicode_decimal": 60048
+    }
+  ]
+}

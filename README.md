@@ -17,52 +17,11 @@ $ npm run start
 $ npm run generate
 ```
 
-For detailed explanation on how things work, check out the [documentation](https://nuxtjs.org).
+## 问题
 
-## Special Directories
-
-You can create the following extra directories, some of which have special behaviors. Only `pages` is required; you can delete them if you don't want to use their functionality.
-
-### `assets`
-
-The assets directory contains your uncompiled assets such as Stylus or Sass files, images, or fonts.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/assets).
-
-### `components`
-
-The components directory contains your Vue.js components. Components make up the different parts of your page and can be reused and imported into your pages, layouts and even other components.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/components).
-
-### `layouts`
-
-Layouts are a great help when you want to change the look and feel of your Nuxt app, whether you want to include a sidebar or have distinct layouts for mobile and desktop.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/layouts).
-
-### `pages`
-
-This directory contains your application views and routes. Nuxt will read all the `*.vue` files inside this directory and setup Vue Router automatically.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/get-started/routing).
-
-### `plugins`
-
-The plugins directory contains JavaScript plugins that you want to run before instantiating the root Vue.js Application. This is the place to add Vue plugins and to inject functions or constants. Every time you need to use `Vue.use()`, you should create a file in `plugins/` and add its path to plugins in `nuxt.config.js`.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/plugins).
-
-### `static`
-
-This directory contains your static files. Each file inside this directory is mapped to `/`.
-
-Example: `/static/robots.txt` is mapped as `/robots.txt`.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/static).
-
-### `store`
-
-This directory contains your Vuex store files. Creating a file in this directory automatically activates Vuex.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/store).
+1. **padding，margin，font-size 等属性的单位怎么取？px？rem？考虑大屏小屏的 px 取值不一样**
+2. **怎样自定义 class? 尝试@apply 无效**
+3. 某元素的 class 写的太多太长是否会影响阅读，有无代码规范 (自定义类可解决)
+4. 像 color，background-color 等属性是否使用 tailwind 的功能类 (自定义类可解决)
+5. 各个断点的阈值 phone 竖屏, phone 横屏, ipad 竖屏, ipad 横屏, pc 等宽度范围是否给定
+6. component 的文件位置问题, 能否手动 import component
