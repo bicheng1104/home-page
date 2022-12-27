@@ -150,16 +150,25 @@
         />
       </div>
     </div>
-    <div class="email pcm:flex">
-      <div class="pcm:flex-1">
-        <div class="signup-title">Sign up to learn about new products.</div>
-        <div class="signup-des">
+    <div class="email px-6 pt-12 pb-14 pcm:flex pcm:px-32.5 py-12 md:pb-13 md:pl-11 md:pr-36 pcm:pb-12">
+      <div class="pcm:w-120 pcm:mr-30">
+        <div class="text-lg md:text-2xl text-white mb-2 font-extrabold leading-6 md:leading-normal">
+          Sign up to learn about new products.
+        </div>
+        <div class="text-sm md:text-base mb-6 md:mb-10 pcm:mb-0 text-white md:font-normal md:w-120">
           In 2022, we’ll be launching a sandbox environment, self-service options, and various new products.
         </div>
       </div>
-      <div class="signup-submit md:flex md:items-center pcm:flex-1">
-        <input class="signup-input w-3/6 phone-max:w-full md:max-w-3xl" />
-        <button class="signup-button w-2/6 phone-max:w-full phone-max:mt-4 md:ml-4 md:w-40">Submit</button>
+      <div class="signup-submit md:flex md:items-center">
+        <input
+          class="font-normal text-base tracking-tight border border-solid border-#9B9B9B w-81.75 py-4 pl-5 md:w-95 md:mr-5"
+          placeholder="Email"
+        />
+        <button
+          class="w-81.75 bg-black text-white text-lg leading-5 font-bold pt-4.75 pb-4.25 px-34.25 mt-4 md:mt-0 md:w-45 md:px-15.875"
+        >
+          Submit
+        </button>
       </div>
     </div>
   </div>
@@ -282,41 +291,5 @@ export default Vue.extend({
 
 .email {
   background: linear-gradient(90deg, #870b4a 0%, #e20074 100%);
-  padding: 48px 24px 76px;
-}
-
-.signup-title {
-  font-weight: 800;
-  font-size: 18px;
-  line-height: 24px;
-  color: #fff;
-  margin-bottom: 8px;
-}
-
-.signup-des {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 20px;
-  color: #fff;
-  margin-bottom: 24px;
-}
-
-.signup-input {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 24px;
-  letter-spacing: -0.5px;
-  color: #6a6a6a;
-  padding: 16px 0 16px 20px;
-}
-
-.signup-button {
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 56px;
-  text-align: center;
-  color: #fff;
-  background: #000;
-  height: 56px;
 }
 </style>
