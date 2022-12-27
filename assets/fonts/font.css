@@ -1,4 +1,29 @@
 @font-face {
   font-family: TeleNeo;
+  src: url(./Tele\ Neo\ Office\ Thin.ttf);
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: TeleNeo;
   src: url(./Tele\ Neo\ Office.ttf);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: TeleNeo;
+  src: url(./Tele\ Neo\ Office\ Medium.ttf);
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: TeleNeo;
+  src: url(./Tele\ Neo\ Office\ Bold.ttf);
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: TeleNeo;
+  src: url(./Tele\ Neo\ Office\ Extrabold.ttf);
+  font-weight: 800;
 }

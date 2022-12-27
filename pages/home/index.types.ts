@@ -7,6 +7,7 @@ export interface TopData {
 export interface PanelDataItem {
   uuid: string
   title: string
+  imageName: string
   imageUrl: string
   content: string
   buttonText: string

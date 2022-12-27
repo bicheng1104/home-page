@@ -38,7 +38,6 @@ export default {
 @import '@/assets/fonts/font.css';
 
 .header-options {
-  font-family: TeleNeo;
   font-style: normal;
   font-weight: 700;
   color: #000;
