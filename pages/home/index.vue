@@ -15,11 +15,16 @@
           optimizing inventive business solutions.</span
         >
       </div>
-      <div class="flex justify-center absolute right-0 bottom-0 left-0 md:-bottom-18.5 pcm:-bottom-40">
+      <div class="flex justify-center absolute z-20 right-0 bottom-0 left-0 md:-bottom-18.5 pcm:-bottom-40">
         <img
           class="w-full welcome-fpo-image max-w-93.75 md:max-w-192 pcm:max-w-230"
           src="~/assets/images/GettyImages-1092342344.png"
         />
+      </div>
+      <div
+        class="flex justify-center w-full overflow-x-hidden absolute z-10 top-15.25 left-1/2 transform -translate-x-1/2"
+      >
+        <img class="w-150 max-w-none md:w-300" src="@/assets/images/welcome-bg-img.png" />
       </div>
     </div>
 
