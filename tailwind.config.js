@@ -54,6 +54,7 @@ module.exports = {
         47.5: '11.875rem',
         50: '12.5rem',
         52.25: '13.0625rem',
+        53: '13.25rem',
         57: '14.25rem',
         57.5: '14.375rem',
         59: '14.75rem',
@@ -63,6 +64,7 @@ module.exports = {
         76: '19rem',
         81.75: '20.4375rem',
         90: '22.5rem',
+        93.75: '23.4375rem',
         95: '23.75rem',
         106: '26.5rem',
         116: '29rem',
@@ -71,7 +73,9 @@ module.exports = {
         149: '37.25rem',
         169: '42.25rem',
         180: '45rem',
+        192: '48rem',
         195: '48.75rem',
+        230: '57.5rem',
       },
       fontSize: {
         '2rem': '2rem',
@@ -84,6 +88,8 @@ module.exports = {
       },
       lineHeight: {},
       maxWidth: {
+        93.75: '23.4375rem',
+        192: '48rem',
         230: '57.5rem',
       },
       inset: {

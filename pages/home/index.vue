@@ -3,7 +3,7 @@
     <div
       class="welcome block w-full relative text-white text-center w-full pt-20 pb-59 px-6 not-italic md:px-23.5 md:pb-106"
     >
-      <span class="mini-title rounded py-1 px-2 text-base leading-4">Welcome to T-Mobile DevEdge</span>
+      <span class="mini-title font-bold rounded py-1 px-2 text-base leading-4">Welcome to T-Mobile DevEdge</span>
       <h1
         class="text-left text-2.5rem leading-tight font-extrabold pt-4 md:text-3rem md:text-center md:flex md:justify-center"
       >
@@ -18,7 +18,10 @@
         >
       </div>
       <div class="flex justify-center absolute right-0 bottom-0 left-0 md:-bottom-18.5 pcm:-bottom-40">
-        <img class="w-full welcome-fpo-image max-w-230" src="~/assets/images/GettyImages-1092342344.png" />
+        <img
+          class="w-full welcome-fpo-image max-w-93.75 md:max-w-192 pcm:max-w-230"
+          src="~/assets/images/GettyImages-1092342344.png"
+        />
       </div>
     </div>
 
@@ -225,20 +228,6 @@ export default Vue.extend({
 
 .mini-title {
   background: rgb(255 255 255 / 10%);
-  font-weight: 700;
-}
-
-.img1 {
-  width: 100%;
-  max-width: 920px;
-  background: url('~/assets/images/GettyImages-1092342344.png') no-repeat;
-  background-size: 100% auto;
-}
-
-.img1::before {
-  content: '';
-  display: block;
-  padding-top: 100%;
 }
 
 .welcome-fpo-image {
@@ -253,12 +242,6 @@ export default Vue.extend({
 
 .panel-gradient {
   @apply bg-gradient-to-r from-purple-400 via-pink-500 to-red-500;
-}
-
-.line {
-  height: 1px;
-  background-color: #9b9b9b;
-  margin: 29px auto 24px;
 }
 
 .pc-solutions > div > div {
