@@ -1,10 +1,6 @@
 import { CustomerImage, NextYearTarget, PanelDataItem, TopData } from './index.types'
 import { genUuid } from '@/utils/utils'
 
-export const PC_MIN_WIDTH = 1440
-
-export const PAD_MIN_WIDTH = 768
-
 export const topData: TopData = {
   miniTitle: 'Welcome to T-Mobile DevEdge',
   title: 'Where developers lead the way in innovation',

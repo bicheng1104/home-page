@@ -1,5 +1,5 @@
 <template>
-  <div class="base-layout">
+  <div class="base-layout not-italic">
     <base-header />
     <Nuxt />
     <base-footer />

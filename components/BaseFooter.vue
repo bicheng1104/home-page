@@ -1,96 +1,100 @@
 <template>
-  <div class="bottom">
-    <div class="logo">
-      <img src="~/assets/images/devedge.png" />
+  <footer
+    class="bg-black text-white p-12 pb-14 md:px-11.5 md:pt-15 md:pb-10 pcm:pt-13.5 pcm:pb-15.5 pcm:pl-57.5 pcm:pr-22.75"
+  >
+    <div class="mb-8.75 pcm:mb-7.75">
+      <img class="w-35" src="@/assets/images/devedge.png" />
     </div>
-    <div class="devedge-content pad-min:flex pad-min:align-start pad-min:justify-between">
-      <div class="edges devedge-item w-full devedge-content-title">
-        <div class="phone-max:w-2/6 phone-max:inline-block">About</div>
-        <div class="phone-max:w-2/6 phone-max:inline-block">Contact</div>
-        <div class="phone-max:w-2/6 phone-max:inline-block">Open Source</div>
-        <div class="phone-max:w-2/6 phone-max:inline-block">IoT (Internet of Things)</div>
-        <div class="phone-max:w-2/6 phone-max:inline-block">Log In</div>
+    <div class="footer-titles flex font-extrabold text-base tracking-0.02em md:hidden">
+      <div class="w-31">
+        <div class="mb-4">About</div>
+        <div class="mb-4">Open Source</div>
+        <div>Log In</div>
       </div>
-      <div class="solution devedge-item w-full">
-        <div class="devedge-content-title">Solution</div>
+      <div class="w-38.75">
+        <div class="mb-4">Contact</div>
+        <div>IoT (Internet of Things)</div>
+      </div>
+    </div>
+    <div class="devedge md:flex md:align-start md:justify-between font-extrabold tracking-0.02em">
+      <div class="devedge-col-about w-full hidden md:block">
+        <div>About</div>
+        <div>IoT (Internet of Things)</div>
+        <div>Open Source</div>
+        <div>Contact</div>
+        <div class="mb-0">Log In</div>
+      </div>
+      <div class="devedge-col w-full">
+        <div>Solution</div>
         <div>Fraud Prevention</div>
         <div>Call Verification</div>
         <div>5G Location Services</div>
         <div>Enhanced Caller ID</div>
         <div>IoT Developer Kit</div>
       </div>
-      <div class="terms devedge-item w-full">
-        <div class="devedge-content-title">Terms</div>
+      <div class="devedge-col w-full">
+        <div>Terms</div>
         <div>Privacy Center</div>
         <div>Privacy Policy</div>
-        <div class="">Fraud Prevent Data Use Policy</div>
+        <div>Fraud Prevent Data Use Policy</div>
         <div>Terms & Conditions</div>
         <div>Do Not Sell My Data</div>
       </div>
-      <div class="support devedge-item w-full">
-        <div class="devedge-content-title">Support</div>
+      <div class="devedge-col w-full">
+        <div>Support</div>
         <div>General FAQ</div>
         <div>API documentation</div>
         <div>IoT documentation</div>
         <div>Open Source documentation</div>
       </div>
     </div>
-    <div>
-      <div>
+    <div class="mt-12 md:mt-10 flex justify-between items-start">
+      <div class="w-39 text-sm leading-loose md:hidden">
         <div>Copyright © 2022 T-Mobile.</div>
         <div>All Rights Reserved.</div>
       </div>
-      <div></div>
+      <div class="hidden md:block">Copyright © 2022 T-Mobile.All Rights Reserved.</div>
+      <div class="text-sm leading-4 md:flex md:items-center">
+        <img class="md:mr-4" src="@/assets/images/twitter.png" /><span class="hidden md:inline"
+          >Follow us on Twitter</span
+        >
+      </div>
     </div>
-  </div>
+  </footer>
 </template>
 
 <script lang="ts">
 export default {
   components: {}, //导入的子组件要在此注册
   name: 'base-footer', //当前组件的名字
-  data() {
-    return {} //可以定义数据及变量
-  },
-  mounted() {}, //页面初始化显示数据调用
   methods: {}, //存放方法
   computed: {}, //计算
   watch: {}, //监听
 }
 </script>
 
-<style lang="postCss" scoped>
-.bottom {
-  background: #000;
-  padding: 48px;
+<style scoped lang="postCss">
+.devedge > div {
+  @apply md:w-36
 }
 
-.logo {
-  margin-bottom: 32px;
+.devedge-col {
+  @apply mr-12 font-normal
 }
 
-.devedge-content {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 24px;
-  color: #f2f2f2;
+.devedge-col:last-child {
+  @apply mr-0
 }
 
-.devedge-content-title {
-  font-weight: 800;
-  font-size: 16px;
-  line-height: 24px;
-  letter-spacing: 0.02em;
-  color: #fff;
+.devedge-col > div {
+  @apply mb-2 text-#F2F2F2;
 }
 
-.devedge-item {
-  margin-bottom: 32px;
-  box-sizing: border-box;
-  padding: 0 0.5em;
+.devedge-col-about > div {
+  @apply mb-6
 }
 
-.devedge-item > div {
-  margin: 0.5em auto;
+.devedge-col > div:first-child {
+  @apply  text-white text-base font-extrabold tracking-0.02em mb-4 mt-8 w-full md:mt-0
 }
 </style>

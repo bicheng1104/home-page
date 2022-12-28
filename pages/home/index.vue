@@ -75,10 +75,10 @@
         </div>
         <hr class="mt-7.25 mb-6 w-81.75 h-0.5 bg-#9B9B9B md:mx-10 md:my-0 md:w-0.5 md:h-116 pcm:mx-15 pcm:mt-6" />
         <div class="md:w-90 md:text-base pcm:w-145 pcm:mt-6">
-          <div class="text-sm mb-6">
+          <div class="text-sm mb-6 md:text-base">
             Over the next year, we’ll be launching a sandbox environment and self-service options, plus solutions for:
           </div>
-          <div v-if="windowWidth >= PC_MIN_WIDTH" class="pc-solutions text-xl flex text-#262626 tracking-0.0075em">
+          <div class="pc-solutions hidden text-xl pcm:flex text-#262626 tracking-0.0075em">
             <div class="pcm:w-80 pcm:mr-6">
               <div>Asset tracking</div>
               <div>Improved mobile customer interaction</div>
@@ -92,10 +92,9 @@
             </div>
           </div>
           <div
-            v-if="windowWidth < PC_MIN_WIDTH"
             v-for="item in nextYearTargets"
             :key="item.uuid"
-            class="text-lg leading-6 text-#262626 mb-4 md:text-xl md:mb-6 md:tracking-0.0075em"
+            class="text-lg leading-6 text-#262626 mb-4 md:text-xl md:mb-6 md:tracking-0.0075em pcm:hidden"
           >
             {{ item.targetText }}
           </div>
@@ -123,7 +122,7 @@
         </div>
       </div>
     </div>
-    <div v-if="windowWidth < PAD_MIN_WIDTH" class="customer-images mt-10 mb-20 md:mt-14 px-4.5">
+    <div class="mt-10 mb-20 md:hidden md:mt-14 px-4.5">
       <div class="w-full flex items-center mb-5">
         <div class="flex-1 flex justify-center"><img src="@/assets/images/finance.png" /></div>
         <div class="flex-1 flex justify-center"><img src="@/assets/images/technology.png" /></div>
@@ -136,10 +135,7 @@
         </div>
       </div>
     </div>
-    <div
-      v-if="windowWidth >= PAD_MIN_WIDTH"
-      class="customer-images mt-10 md:mt-14 md:mb-30 px-4.5 md:flex justify-center"
-    >
+    <div class="hidden mt-10 md:mt-14 md:mb-30 px-4.5 md:flex justify-center">
       <div class="md:w-170 md:flex md:items-center">
         <img
           class="md:w-30"
@@ -176,7 +172,7 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import { panelData, nextYearTargets, topData, customerImages, PC_MIN_WIDTH, PAD_MIN_WIDTH } from './index.data'
+import { panelData, nextYearTargets, topData, customerImages } from './index.data'
 
 export default Vue.extend({
   name: 'HomePage',
@@ -187,16 +183,9 @@ export default Vue.extend({
       panelData,
       nextYearTargets,
       customerImages,
-      windowWidth: 0,
-      PC_MIN_WIDTH,
-      PAD_MIN_WIDTH,
     }
   },
-  created() {
-    if (process.browser) {
-      this.windowWidth = window.innerWidth
-    }
-  },
+
   methods: {
     generatePanelClassName(index: number) {
       return index === 0 ? 'pcm:bg-gradient-to-t pcm:from-#870b4a pcm:to-#e20074 pcm:shadow-panel' : ''
@@ -221,11 +210,6 @@ export default Vue.extend({
           return 'w-50 md:w-80 left-0 -top-16.25 md:left-2/4 md:transform md:-translate-x-1/2 md:-top-6 pcm:-bottom-18.5 pcm:top-auto'
       }
     },
-  },
-  mounted() {
-    window.onresize = () => {
-      this.windowWidth = window.innerWidth
-    }
   },
   destroyed() {
     // 组件销毁后解绑事件
@@ -279,14 +263,6 @@ export default Vue.extend({
 
 .pc-solutions > div > div {
   @apply pcm:mb-6;
-}
-
-.customer-images {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 120px;
 }
 
 .email {
