@@ -4,7 +4,9 @@
       class="flex border-box justify-between items-center pt-5.5 pr-6.875 pb-6.25 pl-6 md:pl-11.5 md:pr-12.75 pcm:pl-32.5 pcm:pr-25 pcm:py-5"
     >
       <div><img src="@/assets/images/header-devedge.png" /></div>
-      <div class="flex-1 hidden pcm:flex header-options text-sm justify-end items-center leading-4">
+      <div
+        class="flex-1 hidden pcm:flex header-options font-bold text-black text-sm justify-end items-center leading-4"
+      >
         <span>About</span>
         <span
           ><span class="solutions">Solutions</span
@@ -13,7 +15,7 @@
         <span>IoT</span>
         <span>Open Source</span>
         <span>Support</span>
-        <button class="involved mr-0 py-3 px-4 text-center">Get Involved</button>
+        <button class="involved mr-0 py-3 px-4 text-center text-white font-extrabold">Get Involved</button>
       </div>
       <div class="right w-5.25 md:w-7.5 pcm:hidden"><img src="@/assets/images/menu.png" /></div>
     </div>
@@ -37,12 +39,6 @@ export default {
 <style lang="postCss" scoped>
 @import '@/assets/fonts/font.css';
 
-.header-options {
-  font-style: normal;
-  font-weight: 700;
-  color: #000;
-}
-
 .header-options > span {
   @apply mr-12
 }
@@ -53,7 +49,5 @@ export default {
 
 .involved {
   background: #E20074;
-  color: #FFF;
-  font-weight: 800;
 }
 </style>

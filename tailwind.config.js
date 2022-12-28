@@ -124,9 +124,7 @@ module.exports = {
     },
     screens: {
       pm: { max: '767px' },
-      'phone-max': { max: '767px' },
-      'pad-min': { min: '768px' },
-      'pc-min': { min: '1280px' },
+
       sm: '640px',
       // => @media (min-width: 640px) { ... }
 
@@ -142,7 +140,7 @@ module.exports = {
       '2xl': '1536px',
       // => @media (min-width: 1536px) { ... }
 
-      pcm: '1440px',
+      pcm: { min: '1440px' },
     },
   },
   variants: {},

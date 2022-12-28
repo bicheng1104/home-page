@@ -1,8 +1,6 @@
 <template>
   <div>
-    <div
-      class="welcome block w-full relative text-white text-center w-full pt-20 pb-59 px-6 not-italic md:px-23.5 md:pb-106"
-    >
+    <div class="welcome block relative text-white text-center w-full pt-20 pb-59 px-6 not-italic md:px-23.5 md:pb-106">
       <span class="mini-title font-bold rounded py-1 px-2 text-base leading-4">Welcome to T-Mobile DevEdge</span>
       <h1
         class="text-left text-2.5rem leading-tight font-extrabold pt-4 md:text-3rem md:text-center md:flex md:justify-center"
@@ -175,14 +173,13 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import { panelData, nextYearTargets, topData, customerImages } from './index.data'
+import { panelData, nextYearTargets, customerImages } from './index.data'
 
 export default Vue.extend({
   name: 'HomePage',
   layout: 'BaseLayout',
   data() {
     return {
-      topData,
       panelData,
       nextYearTargets,
       customerImages,
